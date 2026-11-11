@@ -1,0 +1,1367 @@
+table,key,anomaly,expected_handling
+dim_product,SKU100017,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100028,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100045,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100068,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100089,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100139,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100171,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100225,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100263,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100268,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100288,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100330,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100413,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_product,SKU100421,uncategorised_sku,"list for the account manager, keep out of CRJ until categorised"
+dim_account,SITE_0024,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0071,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0082,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0105,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0110,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0174,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0196,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0294,missing_linen_status,flag; apply the most conservative linen target
+dim_account,SITE_0297,missing_linen_status,flag; apply the most conservative linen target
+sales,ACC701127|SKU100143|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700350|SKU100288|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701673|SKU100151|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701505|SKU100026|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100070|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701568|SKU100193|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100355|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700161|SKU100364|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701673|SKU100350|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700322|SKU100215|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100200|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701806|SKU100067|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700791|SKU100174|2023-05,credit_note,keep: nets the original invoice
+sales,ACC702100|SKU100274|2024-11,credit_note,keep: nets the original invoice
+sales,ACC702086|SKU100077|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701239|SKU100078|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701470|SKU100025|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100053|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701757|SKU100159|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700707|SKU100063|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100354|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700966|SKU100253|2025-07,credit_note,keep: nets the original invoice
+sales,ACC702079|SKU100236|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700084|SKU100251|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701218|SKU100076|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700560|SKU100353|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700567|SKU100318|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701589|SKU100350|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701309|SKU100228|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701470|SKU100244|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701008|SKU100232|2025-01,credit_note,keep: nets the original invoice
+sales,ACC702072|SKU100057|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701932|SKU100073|2024-05,credit_note,keep: nets the original invoice
+sales,ACC702093|SKU100084|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700056|SKU100012|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701505|SKU100167|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700742|SKU100057|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701246|SKU100277|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700910|SKU100434|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100022|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701141|SKU100341|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700700|SKU100367|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100063|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100003|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700980|SKU100112|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700308|SKU100126|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701722|SKU100122|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701393|SKU100330|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700896|SKU100159|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700210|SKU100251|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100055|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700644|SKU100044|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700623|SKU100006|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100056|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100071|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100386|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100247|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700945|SKU100066|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700917|SKU100051|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700196|SKU100077|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701477|SKU100086|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701106|SKU100006|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700714|SKU100323|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701666|SKU100283|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701568|SKU100289|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700427|SKU100063|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700406|SKU100174|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701218|SKU100089|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100122|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700847|SKU100305|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701029|SKU100040|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100259|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701260|SKU100356|2024-04,credit_note,keep: nets the original invoice
+sales,ACC702058|SKU100308|2025-07,credit_note,keep: nets the original invoice
+sales,ACC901631|SKU100411|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700686|SKU100279|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700826|SKU100301|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701449|SKU100106|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100254|2023-09,credit_note,keep: nets the original invoice
+sales,ACC702065|SKU100350|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100070|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100232|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700056|SKU100159|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701757|SKU100062|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700644|SKU100051|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701603|SKU100083|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700238|SKU100030|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701358|SKU100134|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701148|SKU100114|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700987|SKU100311|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701148|SKU100007|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700049|SKU100052|2023-06,credit_note,keep: nets the original invoice
+sales,ACC702079|SKU100007|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700168|SKU100059|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100303|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701680|SKU100155|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701225|SKU100190|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701015|SKU100097|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100256|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700854|SKU100259|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701764|SKU100014|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701477|SKU100298|2025-08,credit_note,keep: nets the original invoice
+sales,ACC901596|SKU100164|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100260|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100048|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701323|SKU100357|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701841|SKU100334|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701582|SKU100047|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701169|SKU100097|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701603|SKU100090|2024-09,credit_note,keep: nets the original invoice
+sales,ACC900637|SKU100108|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700980|SKU100054|2024-04,credit_note,keep: nets the original invoice
+sales,ACC702009|SKU100002|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100136|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100062|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700308|SKU100261|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701239|SKU100426|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701890|SKU100308|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701071|SKU100313|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100224|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700119|SKU100012|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100311|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700651|SKU100171|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701463|SKU100039|2024-06,credit_note,keep: nets the original invoice
+sales,ACC901764|SKU100162|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700287|SKU100409|2024-02,credit_note,keep: nets the original invoice
+sales,ACC702065|SKU100282|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701162|SKU100056|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701505|SKU100127|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700987|SKU100175|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700791|SKU100292|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700812|SKU100310|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700875|SKU100343|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100136|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700301|SKU100189|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701414|SKU100083|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700644|SKU100166|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700441|SKU100203|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700007|SKU100205|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700238|SKU100081|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700315|SKU100235|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701981|SKU100156|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100224|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701407|SKU100144|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700462|SKU100040|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100365|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100137|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701323|SKU100012|2023-01,credit_note,keep: nets the original invoice
+sales,ACC702058|SKU100184|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701372|SKU100145|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700679|SKU100315|2024-04,credit_note,keep: nets the original invoice
+sales,ACC702044|SKU100004|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701267|SKU100240|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100226|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700385|SKU100232|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100191|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701799|SKU100325|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701862|SKU100327|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701372|SKU100033|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701421|SKU100196|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700224|SKU100246|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701848|SKU100087|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700140|SKU100029|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100065|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700364|SKU100004|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700959|SKU100071|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700770|SKU100080|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700868|SKU100197|2025-05,credit_note,keep: nets the original invoice
+sales,ACC700077|SKU100078|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700819|SKU100133|2024-08,credit_note,keep: nets the original invoice
+sales,ACC702023|SKU100251|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701435|SKU100073|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701862|SKU100032|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700672|SKU100161|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700119|SKU100045|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700112|SKU100178|2025-05,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100127|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700532|SKU100270|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701484|SKU100194|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700826|SKU100288|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701281|SKU100088|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701064|SKU100278|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701435|SKU100196|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700056|SKU100001|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700798|SKU100163|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701498|SKU100344|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700098|SKU100033|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100018|2024-01,credit_note,keep: nets the original invoice
+sales,ACC702100|SKU100089|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700441|SKU100061|2024-11,credit_note,keep: nets the original invoice
+sales,ACC702009|SKU100319|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701939|SKU100079|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701589|SKU100277|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700497|SKU100067|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700742|SKU100228|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700364|SKU100320|2023-01,credit_note,keep: nets the original invoice
+sales,ACC702044|SKU100370|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701589|SKU100277|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701953|SKU100062|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700826|SKU100026|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701498|SKU100168|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100234|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701701|SKU100267|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700133|SKU100166|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700434|SKU100165|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700777|SKU100009|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100213|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100054|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701365|SKU100004|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700665|SKU100336|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701953|SKU100305|2023-08,credit_note,keep: nets the original invoice
+sales,ACC702100|SKU100141|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701750|SKU100100|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700427|SKU100213|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700959|SKU100224|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701239|SKU100215|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700357|SKU100402|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701988|SKU100261|2024-06,credit_note,keep: nets the original invoice
+sales,ACC702044|SKU100035|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701421|SKU100047|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701218|SKU100224|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701099|SKU100088|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701974|SKU100126|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701974|SKU100298|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701085|SKU100317|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701554|SKU100325|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700714|SKU100212|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700637|SKU100029|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701540|SKU100300|2025-05,credit_note,keep: nets the original invoice
+sales,ACC700903|SKU100023|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700287|SKU100266|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700014|SKU100003|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701834|SKU100058|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701638|SKU100289|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700924|SKU100295|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700357|SKU100045|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100315|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700021|SKU100129|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700630|SKU100201|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701134|SKU100007|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701421|SKU100343|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701197|SKU100241|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700693|SKU100256|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701407|SKU100032|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100148|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701064|SKU100256|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701365|SKU100146|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701113|SKU100188|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700238|SKU100058|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700847|SKU100197|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100157|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700462|SKU100087|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100048|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700602|SKU100027|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700525|SKU100121|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701743|SKU100173|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700196|SKU100301|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701778|SKU100199|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700084|SKU100218|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701757|SKU100071|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700917|SKU100358|2025-10,credit_note,keep: nets the original invoice
+sales,ACC702093|SKU100076|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700210|SKU100136|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700301|SKU100282|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701897|SKU100031|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701666|SKU100083|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700616|SKU100047|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700035|SKU100262|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701365|SKU100022|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701995|SKU100307|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700413|SKU100267|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701610|SKU100263|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701295|SKU100262|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700847|SKU100041|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701022|SKU100035|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700700|SKU100034|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100083|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700140|SKU100227|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700833|SKU100167|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701456|SKU100302|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701365|SKU100316|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700231|SKU100182|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701526|SKU100350|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701904|SKU100109|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701449|SKU100091|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700266|SKU100288|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700483|SKU100208|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100244|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701932|SKU100030|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701848|SKU100313|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701680|SKU100284|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701239|SKU100078|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700238|SKU100333|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701946|SKU100179|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700644|SKU100288|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701484|SKU100275|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701043|SKU100114|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701442|SKU100039|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701876|SKU100010|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100094|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700609|SKU100026|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701750|SKU100298|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701288|SKU100025|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700175|SKU100297|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700616|SKU100170|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701323|SKU100006|2024-06,credit_note,keep: nets the original invoice
+sales,ACC702086|SKU100278|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700147|SKU100007|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701449|SKU100007|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100175|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700938|SKU100289|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700616|SKU100253|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701848|SKU100276|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701701|SKU100193|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100239|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701911|SKU100242|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701477|SKU100159|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701736|SKU100033|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700077|SKU100078|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701029|SKU100022|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700938|SKU100260|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700266|SKU100136|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100023|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700994|SKU100341|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701638|SKU100193|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100167|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701232|SKU100058|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700343|SKU100048|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700735|SKU100127|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700406|SKU100245|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700931|SKU100279|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701771|SKU100287|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100300|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700238|SKU100147|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701106|SKU100271|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701995|SKU100147|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701645|SKU100047|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100254|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701911|SKU100103|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701183|SKU100210|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701519|SKU100053|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701778|SKU100023|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700861|SKU100249|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701708|SKU100288|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701687|SKU100306|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701498|SKU100046|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701540|SKU100021|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700091|SKU100203|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100033|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700175|SKU100056|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701638|SKU100279|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700973|SKU100352|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701099|SKU100344|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700434|SKU100120|2025-04,credit_note,keep: nets the original invoice
+sales,ACC702016|SKU100003|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701379|SKU100360|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100128|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701386|SKU100290|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100005|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701876|SKU100313|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700497|SKU100357|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700231|SKU100059|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700287|SKU100255|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701491|SKU100134|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701974|SKU100259|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700196|SKU100043|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700427|SKU100353|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701862|SKU100218|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701358|SKU100020|2024-05,credit_note,keep: nets the original invoice
+sales,ACC702002|SKU100239|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100046|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701316|SKU100015|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701085|SKU100209|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701687|SKU100196|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100003|2025-07,credit_note,keep: nets the original invoice
+sales,ACC702030|SKU100028|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701505|SKU100112|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701841|SKU100081|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100204|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701281|SKU100253|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700168|SKU100061|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100032|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701442|SKU100149|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100237|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701463|SKU100222|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700189|SKU100312|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701015|SKU100081|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701519|SKU100006|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700420|SKU100285|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701064|SKU100003|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701372|SKU100095|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700259|SKU100148|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700021|SKU100190|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700665|SKU100181|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100255|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100111|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701365|SKU100338|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701673|SKU100331|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701750|SKU100290|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701323|SKU100223|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700826|SKU100301|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701176|SKU100008|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701603|SKU100083|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100288|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100328|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701603|SKU100213|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100018|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701316|SKU100083|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701652|SKU100317|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700994|SKU100340|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700210|SKU100262|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701960|SKU100222|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700455|SKU100034|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700203|SKU100362|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700196|SKU100044|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700238|SKU100147|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700798|SKU100287|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700924|SKU100237|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700574|SKU100115|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700455|SKU100034|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700980|SKU100112|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701561|SKU100417|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701890|SKU100205|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100031|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100175|2023-01,credit_note,keep: nets the original invoice
+sales,ACC901946|SKU100336|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100055|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700406|SKU100195|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700427|SKU100215|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700014|SKU100172|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700567|SKU100253|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700602|SKU100188|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700560|SKU100412|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700497|SKU100043|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701701|SKU100212|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700672|SKU100285|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700595|SKU100326|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701169|SKU100195|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701022|SKU100046|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700889|SKU100288|2025-10,credit_note,keep: nets the original invoice
+sales,ACC900637|SKU100022|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701225|SKU100260|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701547|SKU100432|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701162|SKU100202|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700833|SKU100126|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701722|SKU100205|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701610|SKU100039|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701547|SKU100305|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701519|SKU100015|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701652|SKU100046|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701925|SKU100229|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700581|SKU100265|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700868|SKU100053|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700707|SKU100359|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100416|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701106|SKU100137|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701057|SKU100311|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700070|SKU100353|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701491|SKU100260|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701386|SKU100038|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701078|SKU100247|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700854|SKU100151|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701463|SKU100352|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700805|SKU100122|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700602|SKU100299|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701113|SKU100181|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700847|SKU100070|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701106|SKU100004|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700658|SKU100354|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700406|SKU100035|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100062|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701582|SKU100271|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700245|SKU100369|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100023|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700742|SKU100012|2024-03,credit_note,keep: nets the original invoice
+sales,ACC702037|SKU100271|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701477|SKU100024|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701288|SKU100361|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701785|SKU100067|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701526|SKU100003|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700357|SKU100174|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100221|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700693|SKU100104|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100060|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701421|SKU100205|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100234|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700833|SKU100013|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701834|SKU100165|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700896|SKU100092|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701967|SKU100023|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701596|SKU100089|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701582|SKU100009|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700728|SKU100310|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701470|SKU100038|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701295|SKU100065|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700063|SKU100201|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100025|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100115|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701841|SKU100081|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100213|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701778|SKU100177|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100078|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701127|SKU100322|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701645|SKU100090|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700161|SKU100014|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700063|SKU100046|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700070|SKU100062|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700567|SKU100264|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701932|SKU100280|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701785|SKU100010|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701274|SKU100254|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701939|SKU100197|2024-08,credit_note,keep: nets the original invoice
+sales,ACC702044|SKU100179|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701484|SKU100290|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100086|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700875|SKU100322|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100017|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700322|SKU100352|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701141|SKU100033|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700686|SKU100107|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701904|SKU100400|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701883|SKU100370|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700609|SKU100026|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700987|SKU100046|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700553|SKU100199|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100191|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100167|2023-05,credit_note,keep: nets the original invoice
+sales,ACC702051|SKU100300|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700014|SKU100391|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700259|SKU100075|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700350|SKU100037|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700742|SKU100099|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701330|SKU100320|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701344|SKU100071|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700819|SKU100053|2025-06,credit_note,keep: nets the original invoice
+sales,ACC702009|SKU100216|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701008|SKU100321|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100062|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701463|SKU100416|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701806|SKU100318|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100125|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701890|SKU100109|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701288|SKU100070|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701736|SKU100060|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701470|SKU100030|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701183|SKU100224|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700735|SKU100051|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701694|SKU100295|2025-05,credit_note,keep: nets the original invoice
+sales,ACC702009|SKU100259|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701582|SKU100142|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701743|SKU100076|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100072|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700490|SKU100286|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100087|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701078|SKU100113|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701442|SKU100176|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700840|SKU100370|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701932|SKU100025|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700973|SKU100207|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700448|SKU100037|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700679|SKU100208|2023-04,credit_note,keep: nets the original invoice
+sales,ACC702044|SKU100330|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701694|SKU100258|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701575|SKU100022|2025-07,credit_note,keep: nets the original invoice
+sales,ACC702072|SKU100037|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701477|SKU100304|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700826|SKU100106|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701099|SKU100050|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700616|SKU100157|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701498|SKU100345|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700861|SKU100073|2024-08,credit_note,keep: nets the original invoice
+sales,ACC702100|SKU100171|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100267|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701316|SKU100167|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700812|SKU100017|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701393|SKU100015|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100361|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700448|SKU100321|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700371|SKU100316|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700518|SKU100304|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700833|SKU100357|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700245|SKU100347|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700959|SKU100088|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700385|SKU100300|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700091|SKU100009|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700854|SKU100019|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700700|SKU100183|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700091|SKU100085|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700903|SKU100045|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701022|SKU100279|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701484|SKU100296|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700812|SKU100075|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701932|SKU100023|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701365|SKU100316|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701036|SKU100250|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701162|SKU100312|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700623|SKU100158|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700658|SKU100069|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701274|SKU100056|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701645|SKU100277|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701995|SKU100078|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701316|SKU100370|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701316|SKU100197|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100001|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100062|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701554|SKU100078|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701554|SKU100198|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100148|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700868|SKU100226|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700021|SKU100324|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700259|SKU100129|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701617|SKU100223|2025-05,credit_note,keep: nets the original invoice
+sales,ACC702072|SKU100200|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701155|SKU100355|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701309|SKU100133|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700987|SKU100045|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100269|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701148|SKU100055|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701022|SKU100024|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701470|SKU100229|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701911|SKU100335|2025-02,credit_note,keep: nets the original invoice
+sales,ACC702037|SKU100349|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701400|SKU100204|2024-02,credit_note,keep: nets the original invoice
+sales,ACC702037|SKU100073|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701442|SKU100198|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701232|SKU100265|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701540|SKU100284|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701778|SKU100062|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701729|SKU100213|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701015|SKU100265|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701897|SKU100042|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701638|SKU100120|2024-02,credit_note,keep: nets the original invoice
+sales,ACC702058|SKU100073|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701953|SKU100008|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700385|SKU100011|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100260|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700896|SKU100159|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700420|SKU100011|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701575|SKU100312|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701806|SKU100351|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700980|SKU100082|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700581|SKU100151|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701904|SKU100037|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701631|SKU100343|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700427|SKU100009|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701708|SKU100352|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701645|SKU100263|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701687|SKU100195|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700938|SKU100074|2023-05,credit_note,keep: nets the original invoice
+sales,ACC901092|SKU100015|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701526|SKU100237|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701960|SKU100036|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100315|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700840|SKU100035|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701547|SKU100068|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701988|SKU100065|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701155|SKU100270|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701750|SKU100036|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701547|SKU100370|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701729|SKU100350|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100087|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701134|SKU100059|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700035|SKU100350|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100409|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700140|SKU100335|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700644|SKU100378|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701386|SKU100048|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701778|SKU100057|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700945|SKU100011|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701974|SKU100298|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700840|SKU100238|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700868|SKU100079|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701603|SKU100288|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700581|SKU100268|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700707|SKU100278|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701071|SKU100070|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701155|SKU100355|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701806|SKU100028|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701876|SKU100008|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701526|SKU100007|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701470|SKU100030|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701764|SKU100025|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701939|SKU100104|2025-01,credit_note,keep: nets the original invoice
+sales,ACC701883|SKU100194|2023-05,credit_note,keep: nets the original invoice
+sales,ACC702037|SKU100043|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700455|SKU100202|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100303|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701358|SKU100212|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700070|SKU100088|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700903|SKU100126|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701869|SKU100351|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100002|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701554|SKU100188|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700672|SKU100261|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700833|SKU100006|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100260|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700567|SKU100350|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700770|SKU100366|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700140|SKU100089|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701071|SKU100077|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701974|SKU100025|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100422|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701862|SKU100067|2024-07,credit_note,keep: nets the original invoice
+sales,ACC900637|SKU100029|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700252|SKU100278|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700749|SKU100017|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700427|SKU100297|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701834|SKU100324|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700791|SKU100298|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701582|SKU100352|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701134|SKU100182|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701232|SKU100275|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701771|SKU100036|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700896|SKU100037|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700707|SKU100006|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100307|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701267|SKU100226|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700140|SKU100177|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701939|SKU100267|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701064|SKU100287|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701176|SKU100169|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700133|SKU100086|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701071|SKU100001|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100138|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700791|SKU100066|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100085|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700931|SKU100165|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701386|SKU100031|2025-07,credit_note,keep: nets the original invoice
+sales,ACC702065|SKU100257|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701281|SKU100051|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700154|SKU100037|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700749|SKU100331|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701547|SKU100273|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701456|SKU100189|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701729|SKU100077|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700203|SKU100357|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100057|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700455|SKU100009|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100075|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701057|SKU100060|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700770|SKU100350|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700357|SKU100130|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700630|SKU100364|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700889|SKU100080|2024-04,credit_note,keep: nets the original invoice
+sales,ACC702002|SKU100063|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700826|SKU100058|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700742|SKU100052|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700574|SKU100407|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701106|SKU100302|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700924|SKU100415|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700735|SKU100184|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701484|SKU100293|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100140|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700819|SKU100145|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700875|SKU100300|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100033|2024-07,credit_note,keep: nets the original invoice
+sales,ACC901596|SKU100142|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700266|SKU100024|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100073|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701701|SKU100138|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700798|SKU100203|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700539|SKU100022|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700126|SKU100040|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700518|SKU100037|2025-06,credit_note,keep: nets the original invoice
+sales,ACC702086|SKU100072|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701568|SKU100309|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701708|SKU100040|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700266|SKU100359|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700987|SKU100231|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700973|SKU100016|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701204|SKU100049|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700455|SKU100035|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701834|SKU100417|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700518|SKU100022|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701463|SKU100351|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701260|SKU100289|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701015|SKU100355|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700462|SKU100040|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700812|SKU100349|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701841|SKU100140|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700973|SKU100260|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700476|SKU100073|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701267|SKU100330|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700119|SKU100120|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100065|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701540|SKU100246|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700679|SKU100086|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701463|SKU100042|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701323|SKU100154|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701736|SKU100158|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700154|SKU100308|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700770|SKU100066|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701519|SKU100091|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700616|SKU100143|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701533|SKU100247|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100087|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700889|SKU100365|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701169|SKU100023|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700329|SKU100098|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700112|SKU100042|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700994|SKU100085|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700077|SKU100021|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700063|SKU100060|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100357|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701806|SKU100036|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701666|SKU100212|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701288|SKU100411|2025-05,credit_note,keep: nets the original invoice
+sales,ACC700112|SKU100042|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700840|SKU100033|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700539|SKU100008|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701134|SKU100057|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701421|SKU100276|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701379|SKU100030|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100350|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700091|SKU100062|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700308|SKU100296|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700098|SKU100361|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701386|SKU100142|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100327|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701071|SKU100008|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700735|SKU100327|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700952|SKU100269|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700189|SKU100312|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701631|SKU100043|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700266|SKU100274|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700364|SKU100331|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700364|SKU100362|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701540|SKU100334|2025-09,credit_note,keep: nets the original invoice
+sales,ACC702016|SKU100033|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700441|SKU100330|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701687|SKU100294|2024-06,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100138|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700462|SKU100033|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701862|SKU100307|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701022|SKU100088|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701344|SKU100289|2024-05,credit_note,keep: nets the original invoice
+sales,ACC702002|SKU100129|2024-05,credit_note,keep: nets the original invoice
+sales,ACC901596|SKU100056|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701764|SKU100014|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700147|SKU100012|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700504|SKU100352|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700553|SKU100431|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700245|SKU100026|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700189|SKU100178|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701512|SKU100008|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100278|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701680|SKU100391|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701750|SKU100045|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700168|SKU100031|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700315|SKU100020|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701057|SKU100356|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700728|SKU100003|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700469|SKU100288|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700924|SKU100063|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701491|SKU100034|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100044|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701302|SKU100315|2024-08,credit_note,keep: nets the original invoice
+sales,ACC701344|SKU100107|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701127|SKU100152|2024-04,credit_note,keep: nets the original invoice
+sales,ACC900637|SKU100172|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700315|SKU100040|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701939|SKU100165|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700203|SKU100278|2023-05,credit_note,keep: nets the original invoice
+sales,ACC701757|SKU100272|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100055|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700700|SKU100361|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701036|SKU100260|2023-08,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100012|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701533|SKU100016|2025-12,credit_note,keep: nets the original invoice
+sales,ACC701442|SKU100149|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701155|SKU100182|2024-02,credit_note,keep: nets the original invoice
+sales,ACC700126|SKU100182|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701316|SKU100319|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701008|SKU100036|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700287|SKU100025|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701617|SKU100223|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701050|SKU100126|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701288|SKU100163|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100088|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700322|SKU100003|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701134|SKU100084|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701344|SKU100014|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701631|SKU100037|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701589|SKU100277|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700021|SKU100032|2023-06,credit_note,keep: nets the original invoice
+sales,ACC701022|SKU100312|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700140|SKU100296|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701379|SKU100030|2025-10,credit_note,keep: nets the original invoice
+sales,ACC700266|SKU100031|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700308|SKU100019|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700875|SKU100028|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701603|SKU100213|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701190|SKU100298|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701246|SKU100320|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701253|SKU100125|2024-03,credit_note,keep: nets the original invoice
+sales,ACC701246|SKU100323|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100198|2025-06,credit_note,keep: nets the original invoice
+sales,ACC901764|SKU100065|2023-09,credit_note,keep: nets the original invoice
+sales,ACC700070|SKU100267|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700784|SKU100087|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700812|SKU100017|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701428|SKU100120|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100043|2023-01,credit_note,keep: nets the original invoice
+sales,ACC701589|SKU100262|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700546|SKU100056|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700399|SKU100303|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100354|2023-03,credit_note,keep: nets the original invoice
+sales,ACC701624|SKU100213|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100073|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701001|SKU100084|2023-08,credit_note,keep: nets the original invoice
+sales,ACC700385|SKU100253|2025-03,credit_note,keep: nets the original invoice
+sales,ACC701253|SKU100203|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700497|SKU100149|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700322|SKU100215|2023-09,credit_note,keep: nets the original invoice
+sales,ACC701036|SKU100273|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701442|SKU100050|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700084|SKU100079|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701148|SKU100276|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701904|SKU100034|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700903|SKU100023|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700217|SKU100225|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700770|SKU100008|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700924|SKU100145|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701106|SKU100302|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701911|SKU100153|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700595|SKU100318|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700007|SKU100301|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700581|SKU100030|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700154|SKU100128|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701078|SKU100003|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701372|SKU100292|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700511|SKU100010|2023-08,credit_note,keep: nets the original invoice
+sales,ACC702058|SKU100363|2023-11,credit_note,keep: nets the original invoice
+sales,ACC700504|SKU100286|2025-05,credit_note,keep: nets the original invoice
+sales,ACC701862|SKU100045|2025-09,credit_note,keep: nets the original invoice
+sales,ACC700658|SKU100313|2023-12,credit_note,keep: nets the original invoice
+sales,ACC701659|SKU100192|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700910|SKU100192|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701288|SKU100069|2025-08,credit_note,keep: nets the original invoice
+sales,ACC700700|SKU100070|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700245|SKU100060|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701855|SKU100326|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701225|SKU100210|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701757|SKU100331|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701246|SKU100232|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700889|SKU100267|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701505|SKU100011|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700539|SKU100167|2024-07,credit_note,keep: nets the original invoice
+sales,ACC701036|SKU100022|2023-05,credit_note,keep: nets the original invoice
+sales,ACC700840|SKU100050|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100361|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700315|SKU100040|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700728|SKU100209|2024-09,credit_note,keep: nets the original invoice
+sales,ACC701876|SKU100071|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701099|SKU100109|2023-12,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100236|2025-04,credit_note,keep: nets the original invoice
+sales,ACC701554|SKU100357|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701533|SKU100089|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700259|SKU100075|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700133|SKU100021|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700231|SKU100061|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700553|SKU100028|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700049|SKU100088|2024-04,credit_note,keep: nets the original invoice
+sales,ACC700406|SKU100195|2025-12,credit_note,keep: nets the original invoice
+sales,ACC700994|SKU100369|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700728|SKU100051|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700504|SKU100250|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700819|SKU100004|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700161|SKU100325|2025-10,credit_note,keep: nets the original invoice
+sales,ACC701673|SKU100156|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700322|SKU100042|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701918|SKU100366|2023-02,credit_note,keep: nets the original invoice
+sales,ACC700686|SKU100039|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700875|SKU100239|2023-04,credit_note,keep: nets the original invoice
+sales,ACC701715|SKU100272|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700861|SKU100022|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700343|SKU100022|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700546|SKU100353|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700567|SKU100110|2023-03,credit_note,keep: nets the original invoice
+sales,ACC700518|SKU100244|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700189|SKU100189|2025-02,credit_note,keep: nets the original invoice
+sales,ACC701834|SKU100116|2025-07,credit_note,keep: nets the original invoice
+sales,ACC700833|SKU100013|2024-12,credit_note,keep: nets the original invoice
+sales,ACC701554|SKU100164|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700133|SKU100137|2024-01,credit_note,keep: nets the original invoice
+sales,ACC701309|SKU100005|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100224|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700742|SKU100293|2024-05,credit_note,keep: nets the original invoice
+sales,ACC701568|SKU100088|2025-08,credit_note,keep: nets the original invoice
+sales,ACC701638|SKU100049|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701953|SKU100325|2024-08,credit_note,keep: nets the original invoice
+sales,ACC700028|SKU100200|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700980|SKU100165|2025-03,credit_note,keep: nets the original invoice
+sales,ACC700854|SKU100106|2023-06,credit_note,keep: nets the original invoice
+sales,ACC700819|SKU100184|2023-07,credit_note,keep: nets the original invoice
+sales,ACC700441|SKU100404|2024-06,credit_note,keep: nets the original invoice
+sales,ACC700854|SKU100014|2025-02,credit_note,keep: nets the original invoice
+sales,ACC700637|SKU100101|2023-07,credit_note,keep: nets the original invoice
+sales,ACC701890|SKU100122|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700077|SKU100310|2025-11,credit_note,keep: nets the original invoice
+sales,ACC701540|SKU100027|2023-01,credit_note,keep: nets the original invoice
+sales,ACC700168|SKU100089|2024-11,credit_note,keep: nets the original invoice
+sales,ACC700406|SKU100174|2024-08,credit_note,keep: nets the original invoice
+sales,ACC702093|SKU100024|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700287|SKU100363|2023-10,credit_note,keep: nets the original invoice
+sales,ACC701155|SKU100077|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701519|SKU100243|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700560|SKU100115|2024-09,credit_note,keep: nets the original invoice
+sales,ACC700462|SKU100082|2024-05,credit_note,keep: nets the original invoice
+sales,ACC700434|SKU100005|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701407|SKU100144|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700665|SKU100435|2024-02,credit_note,keep: nets the original invoice
+sales,ACC701449|SKU100298|2024-07,credit_note,keep: nets the original invoice
+sales,ACC700336|SKU100084|2024-08,credit_note,keep: nets the original invoice
+sales,ACC702100|SKU100298|2023-06,credit_note,keep: nets the original invoice
+sales,ACC901946|SKU100345|2023-11,credit_note,keep: nets the original invoice
+sales,ACC701197|SKU100286|2023-10,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100282|2025-06,credit_note,keep: nets the original invoice
+sales,ACC702079|SKU100172|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701813|SKU100312|2024-10,credit_note,keep: nets the original invoice
+sales,ACC701078|SKU100013|2024-01,credit_note,keep: nets the original invoice
+sales,ACC700210|SKU100016|2025-07,credit_note,keep: nets the original invoice
+sales,ACC701253|SKU100058|2024-12,credit_note,keep: nets the original invoice
+sales,ACC700945|SKU100010|2023-04,credit_note,keep: nets the original invoice
+sales,ACC700441|SKU100327|2025-11,credit_note,keep: nets the original invoice
+sales,ACC700721|SKU100049|2024-04,credit_note,keep: nets the original invoice
+sales,ACC701113|SKU100092|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700567|SKU100041|2024-03,credit_note,keep: nets the original invoice
+sales,ACC700735|SKU100216|2025-06,credit_note,keep: nets the original invoice
+sales,ACC700119|SKU100144|2025-09,credit_note,keep: nets the original invoice
+sales,ACC701246|SKU100316|2024-11,credit_note,keep: nets the original invoice
+sales,ACC701680|SKU100085|2024-10,credit_note,keep: nets the original invoice
+sales,ACC700294|SKU100169|2025-04,credit_note,keep: nets the original invoice
+sales,ACC700210|SKU100093|2025-01,credit_note,keep: nets the original invoice
+sales,ACC700133|SKU100061|2023-02,credit_note,keep: nets the original invoice
+sales,ACC701806|SKU100092|2025-06,credit_note,keep: nets the original invoice
+sales,ACC701519|SKU100082|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700259|SKU100004|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC901666|SKU100051|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701344|SKU100273|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700028|SKU100293|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701715|SKU100232|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700161|SKU100312|2024-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701379|SKU100239|2024-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701631|SKU100018|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700945|SKU100354|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700154|SKU100064|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700441|SKU100167|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700133|SKU100027|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701932|SKU100023|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700266|SKU100160|2025-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701589|SKU100013|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701526|SKU100014|2023-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701456|SKU100004|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701960|SKU100036|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700665|SKU100276|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702002|SKU100129|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700196|SKU100201|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701862|SKU100067|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700091|SKU100268|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701988|SKU100208|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700700|SKU100221|2024-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702023|SKU100162|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701372|SKU100124|2025-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700812|SKU100095|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701729|SKU100332|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701925|SKU100232|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701036|SKU100279|2023-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701456|SKU100035|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701295|SKU100225|2024-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701344|SKU100083|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701470|SKU100011|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700749|SKU100267|2024-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700973|SKU100077|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700973|SKU100003|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700287|SKU100194|2025-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701449|SKU100030|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701015|SKU100253|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700980|SKU100279|2024-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701344|SKU100315|2024-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701617|SKU100223|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700749|SKU100274|2024-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701288|SKU100180|2023-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700441|SKU100146|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700966|SKU100047|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701631|SKU100110|2024-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701421|SKU100278|2023-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700581|SKU100268|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701008|SKU100318|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700567|SKU100048|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700917|SKU100276|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700630|SKU100414|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700994|SKU100252|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701694|SKU100050|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701575|SKU100220|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700259|SKU100079|2024-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700385|SKU100049|2024-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701974|SKU100008|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701946|SKU100185|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700245|SKU100026|2024-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700875|SKU100129|2024-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702079|SKU100353|2025-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700973|SKU100249|2023-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700308|SKU100146|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700987|SKU100065|2025-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700532|SKU100291|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700637|SKU100265|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701533|SKU100194|2025-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700007|SKU100011|2023-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700917|SKU100296|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700490|SKU100004|2023-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701960|SKU100211|2024-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700588|SKU100173|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700434|SKU100046|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702100|SKU100238|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701253|SKU100220|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701358|SKU100262|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700049|SKU100312|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701169|SKU100089|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702051|SKU100195|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700567|SKU100205|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700567|SKU100285|2024-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700861|SKU100022|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701624|SKU100323|2023-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701596|SKU100062|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701323|SKU100176|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700091|SKU100346|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700322|SKU100181|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701631|SKU100037|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701715|SKU100064|2025-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700476|SKU100017|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700448|SKU100040|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701407|SKU100278|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701400|SKU100205|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701897|SKU100330|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700945|SKU100012|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700623|SKU100047|2024-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700308|SKU100019|2023-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700903|SKU100162|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700812|SKU100106|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701911|SKU100002|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700546|SKU100185|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701827|SKU100044|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701512|SKU100032|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701757|SKU100180|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700784|SKU100135|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700294|SKU100253|2023-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701428|SKU100329|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700917|SKU100163|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701064|SKU100272|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702093|SKU100004|2025-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700630|SKU100067|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700854|SKU100002|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702023|SKU100006|2025-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700105|SKU100324|2023-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700994|SKU100001|2024-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700546|SKU100050|2025-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700462|SKU100074|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702009|SKU100072|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700721|SKU100228|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701974|SKU100228|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700245|SKU100369|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700231|SKU100043|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700854|SKU100415|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701169|SKU100272|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700315|SKU100235|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702044|SKU100199|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700714|SKU100065|2024-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701932|SKU100178|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701442|SKU100097|2024-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701890|SKU100208|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700280|SKU100191|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700490|SKU100237|2024-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700231|SKU100059|2025-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700980|SKU100026|2023-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700679|SKU100152|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701533|SKU100089|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701554|SKU100266|2023-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700175|SKU100226|2024-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700469|SKU100071|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700028|SKU100156|2023-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701127|SKU100169|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700889|SKU100035|2023-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700063|SKU100314|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701106|SKU100013|2024-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701309|SKU100403|2025-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701701|SKU100028|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701701|SKU100287|2023-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702072|SKU100037|2024-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701155|SKU100232|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701169|SKU100116|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701204|SKU100028|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701736|SKU100211|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700497|SKU100009|2023-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700294|SKU100288|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700315|SKU100246|2023-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700147|SKU100319|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701988|SKU100405|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702093|SKU100351|2024-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701309|SKU100082|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701652|SKU100161|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700560|SKU100043|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700539|SKU100298|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700119|SKU100102|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701169|SKU100160|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700735|SKU100165|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700903|SKU100118|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700154|SKU100021|2023-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700721|SKU100114|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701281|SKU100209|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701379|SKU100061|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700553|SKU100024|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701918|SKU100171|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700854|SKU100014|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700861|SKU100353|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700735|SKU100015|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701435|SKU100189|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700840|SKU100093|2024-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700819|SKU100186|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700686|SKU100281|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700238|SKU100081|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700924|SKU100233|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700350|SKU100294|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700217|SKU100051|2024-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701379|SKU100061|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700791|SKU100334|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701344|SKU100315|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700056|SKU100344|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701638|SKU100020|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701057|SKU100065|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701869|SKU100209|2025-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701050|SKU100196|2023-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701883|SKU100034|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700910|SKU100072|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700553|SKU100228|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701204|SKU100308|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700021|SKU100346|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701554|SKU100096|2023-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701701|SKU100171|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700007|SKU100039|2023-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701393|SKU100268|2023-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701393|SKU100289|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701470|SKU100026|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700728|SKU100306|2024-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700868|SKU100326|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701806|SKU100281|2023-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701001|SKU100312|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701204|SKU100188|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701743|SKU100254|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700168|SKU100168|2025-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701491|SKU100180|2025-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700420|SKU100004|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700245|SKU100100|2024-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701666|SKU100285|2024-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700238|SKU100047|2024-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701638|SKU100279|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700805|SKU100032|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701246|SKU100007|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701428|SKU100071|2024-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701071|SKU100004|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700826|SKU100362|2025-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700406|SKU100169|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700245|SKU100257|2025-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701267|SKU100025|2023-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700910|SKU100189|2025-11,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700455|SKU100292|2025-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701729|SKU100307|2025-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700546|SKU100037|2023-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700560|SKU100248|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700896|SKU100319|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700644|SKU100095|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700224|SKU100249|2023-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700882|SKU100220|2023-08,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700987|SKU100272|2023-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701442|SKU100364|2023-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700217|SKU100286|2023-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700672|SKU100082|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701050|SKU100167|2024-04,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700203|SKU100058|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700651|SKU100230|2025-12,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700056|SKU100276|2023-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700854|SKU100014|2023-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701911|SKU100404|2024-05,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701414|SKU100021|2024-09,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701624|SKU100070|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700658|SKU100113|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700959|SKU100047|2023-03,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701645|SKU100050|2025-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC701757|SKU100058|2025-02,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700336|SKU100280|2025-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700042|SKU100163|2025-10,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700077|SKU100247|2025-07,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC702030|SKU100108|2024-06,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700217|SKU100018|2025-01,exact_duplicate_line,"flag for review, do not drop silently"
+sales,ACC700210|SKU100368|2023-11,exact_duplicate_line,"flag for review, do not drop silently"
+excluded_accounts,ACC700420,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701078,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701652,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC700952,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC700119,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701351,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701386,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701281,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701533,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701456,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC700875,excluded_account_still_billed,move its sales to 'Hors CRJ'
+excluded_accounts,ACC701071,excluded_account_still_billed,move its sales to 'Hors CRJ'
+occupancy,SITE_0098|2023-01,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0060|2023-02,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0034|2023-02,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0038|2023-04,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0211|2023-05,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0072|2023-06,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0285|2023-08,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0075|2023-07,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0121|2023-09,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0245|2023-10,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0189|2023-12,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0099|2023-10,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0262|2024-03,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0070|2024-03,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0166|2024-02,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0035|2024-04,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0277|2024-04,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0236|2024-05,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0250|2024-07,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0270|2024-07,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0196|2024-07,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0270|2024-10,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0119|2024-11,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0270|2024-12,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0225|2025-02,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0239|2025-02,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0160|2025-02,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0042|2025-04,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0074|2025-05,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0279|2025-05,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0241|2025-07,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0183|2025-09,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0194|2025-07,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0211|2025-10,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0284|2025-11,missing_occupancy,"fall back to the site's quarter average, flag it"
+occupancy,SITE_0014|2025-12,missing_occupancy,"fall back to the site's quarter average, flag it"

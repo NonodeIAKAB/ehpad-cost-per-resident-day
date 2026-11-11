@@ -78,3 +78,19 @@ On garde les attributs réels utiles à l'analyse : capacité, département, sec
 **Décision.** Le générateur reproduit la **structure** observée (grain, familles, catégories CRJ, part des lignes hors CRJ, avoirs, défauts de saisie), jamais les **valeurs** : volumes, prix, cibles de CRJ et clés de répartition fixe/variable sont inventés.
 
 **À confirmer.** Formule du CRJ : chiffre d'affaires de la catégorie ÷ (lits occupés × jours de la période).
+
+## D-009 ✅ Générateur calé sur les cibles, 36 mois d'historique
+
+**Contexte.** Des taux de consommation inventés donnent des CRJ arbitraires (premier essai : médiane hébergement à 0,165 € pour une cible à 0,110 €), donc une analyse sans intérêt.
+
+**Décision.** Après génération, les montants de chaque catégorie sont remis à l'échelle pour que le site médian soit proche de sa cible (entre 0 et 6 % au-dessus). La dispersion entre sites vient d'un facteur d'efficacité propre à chaque site : c'est ce que l'analyse du CRJ doit faire ressortir.
+Période : janvier 2023 à décembre 2025 (36 mois), pour servir aussi au futur projet de prévision.
+
+**Résultat (graine 42).** 260 402 lignes, 435 articles ; CRJ total médian de 0,37 €/résident/jour, de 0,26 € à 0,56 € entre le 1er et le 9e décile des sites.
+
+## D-010 ✅ Anomalies injectées et « vérité terrain » séparée
+
+**Contexte.** Un pipeline de nettoyage ne se juge que sur des défauts connus à l'avance.
+
+**Décision.** Le générateur injecte les défauts rencontrés pendant la mission (articles non catégorisés, comptes exclus encore facturés, avoirs, doublons exacts, statut d'internalisation du linge manquant ou mal saisi, occupation manquante, fichier d'occupation dont la mise en page change chaque trimestre) et les liste dans `data/synthetic/_ground_truth/anomalies.csv`.
+Les tests compareront ce que le pipeline détecte avec cette liste. Le pipeline lui-même ne lit jamais `_ground_truth/`.
