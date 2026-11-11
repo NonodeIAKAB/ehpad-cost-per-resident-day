@@ -1,0 +1,49 @@
+Fichiers FINESS+ convertis en CSV et JSON par referentiels-sante 0.9.0
+
+Source : Agence du Numérique en Santé (ANS), flux FINESS+ publié sur data.gouv.fr
+  FINESS - Structures : https://www.data.gouv.fr/datasets/finess-structures-1
+  FINESS - Activités : https://www.data.gouv.fr/datasets/finess-activites-1
+Licence : Licence Ouverte 2.0, https://www.data.gouv.fr/pages/legal/licences/etalab-2.0
+Libellés des codes : Nomenclatures des objets de santé (NOS) de l'ANS, https://mos.esante.gouv.fr/NOS/
+  tables utilisées, avec leur date de mise à jour :
+    ASS_X10-AgregatCategorieEtablissement : 2026-02-23
+    ASS_X11-FinessAgregatStatutJuridique : 2020-04-24
+    JDV_j240-activite-sanitaire-diverse-regulee-finess : 2026-05-05
+    TRE_G09-DepartementOM : 2026-05-05
+    TRE_R272-EquipementMaterielLourd : 2023-12-15
+    TRE_R274-ActiviteSanitaireRegulee : 2026-08-27
+    TRE_R63-AgregatCategorieEtablissementNiv1 : 2023-12-15
+    TRE_R64-AgregatCategorieEtablissementNiv2 : 2026-06-01
+    TRE_R65-AgregatCategorieEtablissement : 2025-02-28
+    TRE_R66-CategorieEtablissement : 2026-11-02
+    TRE_R68-FinessAgregatStatutJuridiqueNiv1 : 2023-12-15
+    TRE_R69-FinessAgregatStatutJuridiqueNiv2 : 2023-12-15
+    TRE_R72-FinessStatutJuridique : 2024-03-29
+    TRE_R73-ESPIC : 2023-12-15
+    TRE_R74-ModeFixationTarifaire : 2025-12-22
+    TRE_r374-nature-activite-smsse-regulee : 2026-05-05
+    TRE_r381-activite-amm : 2026-03-30
+    TRE_r382-modalite-act-de-soin-amm : 2026-03-30
+    TRE_r383-mention-act-de-soin-amm : 2026-03-30
+    TRE_r384-pratique-therapeutique-specifique-act-de-soin-amm : 2026-03-30
+    TRE_r385-declaration-act-de-soin-amm : 2026-03-30
+    TRE_r392-type-act-smsse-regulee : 2026-11-02
+    TRE_r401-activite-sociale-regulee : 2026-06-01
+    TRE_r402-activite-enseignement-regulee : 2026-02-23
+    TRE_r403-public-activite-smsse-regulee : 2026-06-29
+    TRE_r404-mode-fonctionnement-activite-smsse-regulee : 2026-06-29
+    TRE_r405-modalite-activite-smsse-regulee : 2026-02-23
+    TRE_r406-forme-activite-smsse-regulee : 2026-02-23
+Instantané des structures : finess-structures-mensuel-202610.json.gz, produit par l'ANS le 2026-11-01
+Instantané des activités : finess-activites-mensuel-202610.json.gz, produit par l'ANS le 2026-11-01
+Conversion : 2026-11-09
+Positions calculées : 53506 établissements dont le flux donne x et y sans latitude ni longitude ; colonne latitude_longitude_origine
+
+Ces fichiers transforment les données de l'ANS : tables mises à plat, libellés des nomenclatures
+NOS ajoutés, format de l'ancienne extraction reconstitué. L'ANS ne les a ni produits ni validés.
+Description des colonnes : https://github.com/Irreductix/referentiels-sante/blob/main/docs/FINESS.md
+Outil et signalements : https://github.com/Irreductix/referentiels-sante
+
+Vous utilisez ces fichiers ? Dites-nous en une ligne ce qui vous manque ou ce qui vous gêne :
+contact@irreductix.fr, ou une discussion sur la fiche data.gouv.fr du jeu. Les prochaines
+améliorations sont choisies d'après ces retours.

@@ -1,0 +1,22 @@
+{
+  "run_utc": "2026-11-11T19:07:29+00:00",
+  "parameters": {
+    "n": 300,
+    "seed": 42,
+    "secteur": "privé lucratif",
+    "max_share_per_legal_entity": 0.02
+  },
+  "counts": {
+    "establishments_read": 175021,
+    "active_ehpad": 7413,
+    "rejected_by_quality_checks": 61,
+    "eligible_after_sector_filter": 1778,
+    "panel": 300
+  },
+  "issues_by_check": {
+    "position_computed_from_xy": 1862,
+    "missing_installed_capacity": 58,
+    "missing_position": 3
+  },
+  "source": "FINESS+ (ANS), Licence Ouverte 2.0 - see MENTION-SOURCE.txt for the snapshot date"
+}
