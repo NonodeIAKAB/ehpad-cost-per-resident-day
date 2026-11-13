@@ -86,11 +86,42 @@ On garde les attributs réels utiles à l'analyse : capacité, département, sec
 **Décision.** Après génération, les montants de chaque catégorie sont remis à l'échelle pour que le site médian soit proche de sa cible (entre 0 et 6 % au-dessus). La dispersion entre sites vient d'un facteur d'efficacité propre à chaque site : c'est ce que l'analyse du CRJ doit faire ressortir.
 Période : janvier 2023 à décembre 2025 (36 mois), pour servir aussi au futur projet de prévision.
 
-**Résultat (graine 42).** 260 402 lignes, 435 articles ; CRJ total médian de 0,37 €/résident/jour, de 0,26 € à 0,56 € entre le 1er et le 9e décile des sites.
+**Résultat (graine 42, après D-012).** 253 474 lignes, 435 articles ; CRJ total médian de 0,37 €/résident/jour, de 0,24 € à 0,52 € entre le 1er et le 9e décile des sites.
 
 ## D-010 ✅ Anomalies injectées et « vérité terrain » séparée
 
 **Contexte.** Un pipeline de nettoyage ne se juge que sur des défauts connus à l'avance.
 
-**Décision.** Le générateur injecte les défauts rencontrés pendant la mission (articles non catégorisés, comptes exclus encore facturés, avoirs, doublons exacts, statut d'internalisation du linge manquant ou mal saisi, occupation manquante, fichier d'occupation dont la mise en page change chaque trimestre) et les liste dans `data/synthetic/_ground_truth/anomalies.csv`.
+**Décision.** Le générateur injecte les défauts rencontrés pendant la mission (articles non catégorisés, comptes inactifs avec chiffre d'affaires, sites sans compte actif, avoirs, doublons exacts, statut d'internalisation du linge manquant ou mal saisi, occupation manquante, fichier d'occupation dont la mise en page change chaque trimestre) et les liste dans `data/synthetic/_ground_truth/anomalies.csv`.
 Les tests compareront ce que le pipeline détecte avec cette liste. Le pipeline lui-même ne lit jamais `_ground_truth/`.
+
+## D-011 ✅ Chemin du projet : paramètre Power Query, pas cellule Excel
+
+**Contexte.** Première version : chemin lu dans une cellule nommée via `Excel.CurrentWorkbook`. À l'actualisation, `Ventes` échoue sur `Formula.Firewall` : Power Query refuse de combiner deux sources (le classeur et le dossier) dans une même requête.
+
+**Décision.** `RacineProjet` devient un paramètre Power Query (valeur texte, sans accès à une source).
+
+**Écarté.** Désactiver les niveaux de confidentialité (« Toujours ignorer les niveaux de confidentialité ») : ça masque le problème, dépend du réglage de chaque poste et affaiblit une protection.
+
+## D-012 ✅ Comptes inactifs exclus en entier ; CRJ calculé par site
+
+**Contexte.** Dans la mission, certains comptes étaient déclarés inactifs **après validation avec le métier**, pour deux motifs :
+- le compte n'avait pas de chiffre d'affaires ;
+- le client commandait sur un autre compte de la même enseigne (un site avait souvent deux numéros de compte, et il fallait établir avec le métier lequel était actif).
+
+**Décision.**
+- Un compte inactif est exclu **en entier** : ses ventes ne comptent pas dans le CRJ. Elles restent dans `FaitVentes`, catégorie « Hors CRJ - compte inactif », pour que le total rapproche des exports.
+- Le grain du CRJ est le **site** : lits comptés une seule fois, ventes de ses comptes actifs.
+- Un site sans compte actif n'a pas de CRJ : il sort des moyennes et des classements.
+- Un compte inactif qui reçoit encore des commandes remonte en exception « à vérifier » : commande égarée, ou statut du compte à revoir avec le métier.
+- `inactive_accounts.csv` garde le motif et la trace de la validation (`validated_by`, `validated_on`).
+
+**Historique.** Une version intermédiaire gardait ces ventes dans le CRJ du site ; écartée après rappel de la règle métier.
+
+## D-013 ✅ Mise en mémoire (`Table.Buffer`) des tables réutilisées
+
+**Contexte.** `FaitVentes` et `Exceptions` ne finissaient pas de s'actualiser. Power Query n'a pas de cache entre étapes : une table utilisée plusieurs fois est recalculée à chaque usage. `Exceptions` utilise `FaitVentes` six fois, et `FaitVentes` réutilise sa propre étape pour détecter les doublons : chaque usage relisait les 36 exports et refaisait toutes les jointures.
+
+**Décision.** `Table.Buffer` sur les tables réutilisées (`FaitVentes` et `FaitOccupation` dans `Exceptions`, l'étape avant le comptage des doublons, les petites tables de référence avant jointure). Requêtes intermédiaires en « connexion uniquement » : rien n'est écrit dans une feuille sauf `Exceptions`.
+
+**Coût.** Les tables mises en mémoire occupent de la RAM (environ 250 000 lignes ici, acceptable). À ne pas généraliser : un `Table.Buffer` inutile ralentit au lieu d'accélérer.
