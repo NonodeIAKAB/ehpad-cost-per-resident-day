@@ -10,8 +10,9 @@ Outputs (in --out, default data/synthetic):
     occupancy/occupancy_AAAA_Qn.xlsx client occupancy file, layout differs each quarter
     ref/dim_product.csv              product master, some new SKUs not yet categorised
     ref/dim_account.csv              billing accounts, segment, linen internalisation
-    ref/excluded_accounts.csv        accounts the business asks to keep out of the CRJ
-    ref/crj_target.csv               target CRJ per category, fixed / variable split
+    ref/inactive_accounts.csv        accounts validated as inactive with the business (no sales,
+                                     or the site orders on another account); their sales are excluded
+    ref/crj_target.csv               target CRJ per category: fixed and variable EUR per bed-day, bed base
     _ground_truth/anomalies.csv      every defect injected on purpose, for the tests
 
 Usage:
@@ -44,16 +45,20 @@ SHARE_NEW_UNCATEGORISED = 0.03      # new SKUs missing a CRJ category in the mas
 YEARLY_PRICE_INCREASE = 0.035
 CREDIT_NOTE_RATE = 0.004
 DUPLICATE_LINE_RATE = 0.001
-N_EXCLUDED_ACCOUNTS = 12
+SHARE_SITES_TWO_ACCOUNTS = 0.08    # site has two account numbers; it orders on one, the other is inactive
+N_SITES_WITHOUT_SALES = 4          # account opened, never ordered: no CRJ to compute
+STRAY_ORDER_RATE = 0.01            # lines that still land on the inactive account
 
-# Invented targets, EUR per occupied resident-day, with the share that scales with installed capacity.
+# Invented targets, EUR per bed and per day, split into a fixed and a variable component.
+# Budget rule (business): installed beds x (fixed + variable) for these categories.
 TARGETS = [
     ("CRJ Hebergement", 0.110, 0.35),
     ("CRJ Plonge", 0.055, 0.60),
-    ("CRJ Cuisine", 0.035, 1.00),
+    ("CRJ Cuisine", 0.035, 0.70),
     ("CRJ autres univers", 0.030, 1.00),
 ]
 # Linen target depends on how much of the linen the site washes in-house.
+# Budget rule (business): occupied beds x variable linen CRJ.
 LINEN_TARGETS = {"INTERNE": 0.160, "PARTIEL": 0.095, "EXTERNE": 0.025}
 
 # Clean value -> messy variants seen in hand-maintained client files.
@@ -87,21 +92,37 @@ def build_products(rng: np.random.Generator) -> tuple[pd.DataFrame, list[dict]]:
     return pd.DataFrame(rows), anomalies
 
 
-def build_accounts(sites: pd.DataFrame, rng: np.random.Generator) -> tuple[pd.DataFrame, list[dict]]:
-    rows, anomalies = [], []
+def build_accounts(sites: pd.DataFrame, rng: np.random.Generator):
+    """One billing account per site; some sites have a second number and order on only one of them.
+
+    Returns the accounts, the accounts validated as inactive, the anomalies and the sites without sales.
+    The first account is the one the client quotes in its occupancy file, even when it is the inactive one.
+    """
+    rows, inactive, anomalies = [], [], []
+    no_sales = set(sites["site_id"].sample(n=N_SITES_WITHOUT_SALES, random_state=rng.integers(1e9)))
     for i, site in enumerate(sites.itertuples(), start=1):
         linen = rng.choice(list(LINEN_TARGETS), p=[0.55, 0.30, 0.15])
         label = rng.choice(MESSY_INTERNALISATION[linen])
         if rng.random() < 0.03:
             label = "Non renseigné"
             anomalies.append({"table": "dim_account", "key": site.site_id, "anomaly": "missing_linen_status",
-                              "expected_handling": "flag; apply the most conservative linen target"})
-        rows.append({"account_id": f"ACC{700000 + i * 7}", "site_id": site.site_id,
-                     "segment": rng.choice(SEGMENTS, p=[0.65, 0.15, 0.12, 0.08]),
-                     "linen_internalisation": label, "linen_internalisation_true": linen})
-        if rng.random() < 0.04:   # a few sites are billed on a second account
-            rows.append({**rows[-1], "account_id": f"ACC{900000 + i * 7}"})
-    return pd.DataFrame(rows), anomalies
+                              "expected_handling": "flag; linen target undetermined"})
+        base = {"site_id": site.site_id, "segment": rng.choice(SEGMENTS, p=[0.65, 0.15, 0.12, 0.08]),
+                "linen_internalisation": label, "linen_internalisation_true": linen}
+        first = f"ACC{700000 + i * 7}"
+        rows.append({"account_id": first, **base, "orders_here": True})
+        if site.site_id in no_sales:
+            rows[-1]["orders_here"] = False
+            inactive.append({"account_id": first, "reason": "pas de chiffre d'affaires"})
+            anomalies.append({"table": "sales", "key": site.site_id, "anomaly": "site_without_active_account",
+                              "expected_handling": "no CRJ computed for the site"})
+        elif rng.random() < SHARE_SITES_TWO_ACCOUNTS:
+            rows[-1]["orders_here"] = False
+            rows.append({"account_id": f"ACC{900000 + i * 7}", **base, "orders_here": True})
+            inactive.append({"account_id": first, "reason": "commandes passées sur un autre compte"})
+    accounts = pd.DataFrame(rows)
+    inactive = pd.DataFrame(inactive).assign(validated_by="métier (KAM)", validated_on=pd.Timestamp("2025-07-15"))
+    return accounts, inactive, anomalies, no_sales
 
 
 def build_occupancy(sites: pd.DataFrame, months: pd.DatetimeIndex, rng: np.random.Generator) -> pd.DataFrame:
@@ -115,10 +136,14 @@ def build_occupancy(sites: pd.DataFrame, months: pd.DatetimeIndex, rng: np.rando
     return pd.concat(frames, ignore_index=True)
 
 
-def build_sales(sites, accounts, products, occupancy, months, rng):
-    """Monthly lines site x SKU x month. Spend follows occupied beds, a site efficiency factor and price."""
-    main_account = accounts.drop_duplicates("site_id").set_index("site_id")["account_id"]
-    extra_account = accounts[accounts.duplicated("site_id")].set_index("site_id")["account_id"]
+def build_sales(sites, accounts, products, occupancy, months, no_sales, rng):
+    """Monthly lines site x SKU x month. Spend follows occupied beds, a site efficiency factor and price.
+
+    Lines are billed on the account the site orders on; a few stray orders still land on the
+    inactive account of two-account sites.
+    """
+    ordering = accounts[accounts["orders_here"]].set_index("site_id")["account_id"]
+    dormant = accounts[~accounts["orders_here"]].set_index("site_id")["account_id"]
     linen = accounts.drop_duplicates("site_id").set_index("site_id")["linen_internalisation_true"]
     linen_factor = {"INTERNE": 1.0, "PARTIEL": 0.55, "EXTERNE": 0.12}
     occ = occupancy.set_index(["site_id", "month"])["occupied_beds"]
@@ -126,6 +151,8 @@ def build_sales(sites, accounts, products, occupancy, months, rng):
 
     lines = []
     for site in sites["site_id"]:
+        if site in no_sales:
+            continue
         efficiency = rng.lognormal(0, 0.18)          # some sites overspend: what the CRJ should reveal
         basket = pd.concat([g.sample(n=max(1, int(len(g) * rng.uniform(0.08, 0.16))), random_state=rng.integers(1e9))
                             for g in by_family.values()])
@@ -140,7 +167,9 @@ def build_sales(sites, accounts, products, occupancy, months, rng):
                 if qty == 0:
                     continue
                 price = p.unit_price_2023 * (1 + YEARLY_PRICE_INCREASE) ** years
-                account = extra_account.get(site, main_account[site]) if rng.random() < 0.3 else main_account[site]
+                account = ordering[site]
+                if site in dormant.index and rng.random() < STRAY_ORDER_RATE:
+                    account = dormant[site]
                 lines.append((account, p.sku, month, qty, round(qty * price, 2)))
     sales = pd.DataFrame(lines, columns=["account_id", "sku", "month", "quantity", "net_invoice_value"])
     return sales
@@ -248,23 +277,21 @@ def main() -> None:
     months = pd.date_range(START, END, freq="MS")
 
     products, a_prod = build_products(rng)
-    accounts, a_acc = build_accounts(sites, rng)
+    accounts, inactive, a_acc, no_sales = build_accounts(sites, rng)
     occupancy = build_occupancy(sites, months, rng)
-    sales = build_sales(sites, accounts, products, occupancy, months, rng)
+    sales = build_sales(sites, accounts, products, occupancy, months, no_sales, rng)
     sales = calibrate_to_targets(sales, accounts, products, occupancy, rng)
     sales, a_sales = inject_sales_defects(sales, rng)
 
-    excluded = accounts.sample(n=N_EXCLUDED_ACCOUNTS, random_state=rng.integers(1e9))
-    excluded = pd.DataFrame({"account_id": excluded["account_id"],
-                             "reason": rng.choice(["litige", "fermeture", "hors périmètre"], N_EXCLUDED_ACCOUNTS),
-                             "since": rng.choice(pd.date_range("2023-06-01", "2025-06-01", freq="QS"), N_EXCLUDED_ACCOUNTS)})
-    a_excl = [{"table": "excluded_accounts", "key": a, "anomaly": "excluded_account_still_billed",
-               "expected_handling": "move its sales to 'Hors CRJ'"} for a in excluded["account_id"]]
+    billed = sales[sales["account_id"].isin(inactive["account_id"])]
+    a_inactive = [{"table": "sales", "key": acc, "anomaly": "inactive_account_with_sales",
+                   "expected_handling": "exclude from the CRJ; ask the business whether the account is really inactive"}
+                  for acc in sorted(billed["account_id"].unique())]
 
-    targets = [{"crj_category": c, "linen_internalisation": None, "target_eur_per_resident_day": t,
-                "share_fixed": f, "share_variable": round(1 - f, 2)} for c, t, f in TARGETS]
-    targets += [{"crj_category": "CRJ Lingerie", "linen_internalisation": k, "target_eur_per_resident_day": v,
-                 "share_fixed": 0.40, "share_variable": 0.60} for k, v in LINEN_TARGETS.items()]
+    targets = [{"crj_category": c, "linen_internalisation": None, "crj_fixe": round(t * f, 4),
+                "crj_variable": round(t * (1 - f), 4), "base_lits": "installés"} for c, t, f in TARGETS]
+    targets += [{"crj_category": "CRJ Lingerie", "linen_internalisation": k, "crj_fixe": 0.0,
+                 "crj_variable": v, "base_lits": "occupés"} for k, v in LINEN_TARGETS.items()]
 
     ref = args.out / "ref"
     (args.out / "_ground_truth").mkdir(parents=True, exist_ok=True)
@@ -272,11 +299,11 @@ def main() -> None:
     write_sales_exports(sales, args.out)
     a_occ = write_occupancy_files(occupancy, accounts, args.out, rng)
     products.drop(columns="unit_price_2023").to_csv(ref / "dim_product.csv", index=False)
-    accounts.drop(columns="linen_internalisation_true").to_csv(ref / "dim_account.csv", index=False)
-    excluded.to_csv(ref / "excluded_accounts.csv", index=False)
+    accounts.drop(columns=["linen_internalisation_true", "orders_here"]).to_csv(ref / "dim_account.csv", index=False)
+    inactive.to_csv(ref / "inactive_accounts.csv", index=False)
     pd.DataFrame(targets).to_csv(ref / "crj_target.csv", index=False)
     occupancy.to_csv(args.out / "_ground_truth" / "occupancy_true.csv", index=False)
-    pd.DataFrame(a_prod + a_acc + a_sales + a_excl + a_occ).to_csv(
+    pd.DataFrame(a_prod + a_acc + a_sales + a_inactive + a_occ).to_csv(
         args.out / "_ground_truth" / "anomalies.csv", index=False)
 
     print(f"{len(sales):,} sales lines, {sales['sku'].nunique()} SKUs, {len(months)} months, "

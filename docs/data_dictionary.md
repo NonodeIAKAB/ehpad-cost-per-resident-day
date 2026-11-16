@@ -83,14 +83,30 @@ Grain : un site × un article × un mois. Données **synthétiques**.
 
 Grain : un site × un mois. Nombre de lits occupés, fourni par le client dans un fichier dont le format change d'un trimestre à l'autre.
 
-## 🚧 `ref_excluded_accounts` – comptes hors CRJ
+## ✅ `data/synthetic/ref/inactive_accounts.csv` – comptes inactifs
 
-Comptes que le métier demande d'exclure du calcul (litige, fermeture, hors périmètre), avec motif et date.
+Comptes déclarés inactifs **après validation avec le métier** (équivalent du statut `_No CRJ` de l'outil d'origine).
+Le compte est exclu en entier : ses ventes ne comptent pas dans le CRJ (voir D-012).
 
-## 🚧 `ref_crj_target` – cibles de CRJ
+| Colonne | Type | Description |
+|---|---|---|
+| `account_id` | texte | Compte concerné |
+| `reason` | texte | `pas de chiffre d'affaires` ou `commandes passées sur un autre compte` |
+| `validated_by`, `validated_on` | texte, date | Qui a validé l'inactivité, et quand |
 
-Cible en euros par résident et par jour, par catégorie, décomposée en part fixe et part variable.
-La cible lingerie dépend du niveau d'internalisation du linge du site.
+## ✅ `data/synthetic/ref/crj_target.csv` – cibles de CRJ
+
+| Colonne | Type | Description |
+|---|---|---|
+| `crj_category` | texte | Catégorie CRJ |
+| `linen_internalisation` | texte | Rempli pour la lingerie seulement : `INTERNE`, `PARTIEL`, `EXTERNE` |
+| `crj_fixe`, `crj_variable` | décimal | Cible en € par lit et par jour, part fixe et part variable |
+| `base_lits` | texte | `installés` ou `occupés` : base de lits du budget (voir D-014) |
+
+## ✅ `CiblesSite` (requête Power Query) – cible applicable par site
+
+Une ligne par site actif et par catégorie CRJ : `site_id`, `crj_category`, `linen_status`, `crj_fixe`, `crj_variable`, `base_lits`.
+Pas de ligne lingerie pour un site sans statut de linge (voir D-015).
 
 ## 🚧 `dim_date` – calendrier
 

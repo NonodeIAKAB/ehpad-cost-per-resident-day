@@ -1,0 +1,174 @@
+// =====================================================================================
+// Mesures du modèle CRJ (Power Pivot / Power BI)
+// À créer dans la table FaitVentes : Power Pivot > Mesures > Nouvelle mesure,
+// ou dans la zone de calcul sous FaitVentes en saisissant  Nom := expression
+// Convention : une mesure = une définition métier. Les mesures composées réutilisent
+// les mesures de base au lieu de recopier leur logique (l'outil d'origine en avait ~40
+// copiées-collées : CRJ1..CRJ5, BUDGET1..5...).
+// =====================================================================================
+
+
+// ---------- 1. Chiffre d'affaires --------------------------------------------------
+
+// Tout le chiffre d'affaires facturé, y compris hors CRJ : sert au rapprochement avec les exports.
+CA total :=
+SUM ( FaitVentes[net_invoice_value] )
+
+// Chiffre d'affaires des seules catégories CRJ, hors comptes inactifs.
+// KEEPFILTERS : si l'utilisateur filtre une catégorie, le filtre est conservé (intersection),
+// au lieu d'être remplacé par "toutes les catégories CRJ".
+CA CRJ :=
+CALCULATE (
+    [CA total],
+    KEEPFILTERS ( DimCategorieCRJ[dans_crj] = TRUE () )
+)
+
+
+// ---------- 2. Dénominateurs ---------------------------------------------------------
+
+// Lits occupés x jours, sur les seuls sites qui ont un compte actif.
+// FaitOccupation n'est pas reliée aux catégories : un filtre "CRJ Lingerie" ne change pas
+// le dénominateur, ce qui donne bien CA lingerie / résidents-jours du site.
+Résidents-jours :=
+CALCULATE (
+    SUM ( FaitOccupation[resident_days] ),
+    KEEPFILTERS ( DimSite[a_compte_actif] = TRUE () )
+)
+
+// Lits installés x jours : base du CRJ "capacité théorique".
+Lits-jours installés :=
+CALCULATE (
+    SUM ( FaitOccupation[installed_bed_days] ),
+    KEEPFILTERS ( DimSite[a_compte_actif] = TRUE () )
+)
+
+Taux d'occupation :=
+DIVIDE ( [Résidents-jours], [Lits-jours installés] )
+
+
+// ---------- 3. CRJ réel ----------------------------------------------------------------
+
+// Coût résident jour sur l'occupation réelle : € dépensés par résident présent et par jour.
+CRJ réel :=
+DIVIDE ( [CA CRJ], [Résidents-jours] )
+
+// Même chiffre d'affaires rapporté à la capacité installée : neutralise les variations
+// d'occupation (un site à moitié vide n'affiche pas un CRJ artificiellement élevé).
+CRJ capacité théorique :=
+DIVIDE ( [CA CRJ], [Lits-jours installés] )
+
+
+// ---------- 4. Cumuls et comparaisons --------------------------------------------------
+// Nécessite DimCalendrier marquée comme table de dates (Conception > Marquer comme table de dates).
+
+CA CRJ cumul annuel :=
+CALCULATE ( [CA CRJ], DATESYTD ( DimCalendrier[date] ) )
+
+Résidents-jours cumul annuel :=
+CALCULATE ( [Résidents-jours], DATESYTD ( DimCalendrier[date] ) )
+
+// Un ratio cumulé = cumul du numérateur / cumul du dénominateur.
+// Jamais la moyenne des CRJ mensuels : un mois à faible occupation pèserait autant qu'un autre.
+CRJ réel cumul annuel :=
+DIVIDE ( [CA CRJ cumul annuel], [Résidents-jours cumul annuel] )
+
+CRJ réel N-1 :=
+CALCULATE ( [CRJ réel], SAMEPERIODLASTYEAR ( DimCalendrier[date] ) )
+
+Évolution CRJ vs N-1 :=
+DIVIDE ( [CRJ réel] - [CRJ réel N-1], [CRJ réel N-1] )
+
+
+// ---------- 5. Qualité et rapprochement ------------------------------------------------
+
+// Chiffre d'affaires que le calcul n'utilise pas : hors CRJ, comptes inactifs, articles à traiter.
+// CA total = CA CRJ + CA hors calcul, à vérifier sur chaque publication.
+CA hors calcul :=
+CALCULATE (
+    [CA total],
+    KEEPFILTERS ( DimCategorieCRJ[dans_crj] = FALSE () )
+)
+
+// Nombre de sites qui ont un CRJ (compte actif et occupation connue).
+Nb sites CRJ :=
+COUNTROWS (
+    FILTER ( VALUES ( DimSite[site_id] ), NOT ISBLANK ( [CRJ réel] ) )
+)
+
+// Part des résidents-jours venant d'une occupation imputée : au-delà de quelques %,
+// le CRJ de la période repose trop sur des estimations.
+Part occupation imputée :=
+DIVIDE (
+    CALCULATE ( [Résidents-jours], KEEPFILTERS ( FaitOccupation[is_imputed] = TRUE () ) ),
+    [Résidents-jours]
+)
+
+
+// ---------- 6. Cible et budget ---------------------------------------------------------
+// Règle métier (validée) :
+//   Hébergement, Plonge, Cuisine : lits installés x (CRJ fixe + CRJ variable)
+//   Autres univers               : lits installés x CRJ autres
+//   Lingerie                     : lits occupés x CRJ lingerie variable (selon le statut du linge)
+// Valeurs en € par lit et par jour, multipliées par les jours de la période.
+// Lingerie d'un site sans statut de linge : hors comparaison (ni budget, ni chiffre d'affaires).
+// Nécessite la table CiblesSite, reliée à DimSite[site_id] et à DimCategorieCRJ[crj_category].
+
+// Pourquoi CALCULATE ( ..., DimSite[site_id] = s ) : CiblesSite est du côté "plusieurs" de DimSite,
+// son filtre ne remonte pas vers DimSite. Il faut donc filtrer le site explicitement pour que
+// FaitOccupation renvoie les lits de CE site, sur la période affichée.
+Budget CRJ :=
+SUMX (
+    CiblesSite,
+    VAR s = CiblesSite[site_id]
+    VAR base =
+        IF (
+            CiblesSite[base_lits] = "occupés",
+            CALCULATE ( [Résidents-jours], DimSite[site_id] = s ),
+            CALCULATE ( [Lits-jours installés], DimSite[site_id] = s )
+        )
+    RETURN
+        ( CiblesSite[crj_fixe] + CiblesSite[crj_variable] ) * base
+)
+
+// Chiffre d'affaires des seuls couples site x catégorie qui ont une cible : on ne compare
+// que ce qui est comparable (la lingerie des sites sans statut de linge en est exclue).
+CA CRJ comparable :=
+SUMX (
+    CiblesSite,
+    VAR s = CiblesSite[site_id]
+    VAR c = CiblesSite[crj_category]
+    RETURN
+        CALCULATE ( [CA CRJ], DimSite[site_id] = s, DimCategorieCRJ[crj_category] = c )
+)
+
+// Positif = dépassement du budget.
+Écart budget € :=
+[CA CRJ comparable] - [Budget CRJ]
+
+Écart budget % :=
+DIVIDE ( [Écart budget €], [Budget CRJ] )
+
+// Le budget ramené à un CRJ par résident présent et par jour, pour comparer avec le CRJ réel.
+CRJ cible :=
+DIVIDE ( [Budget CRJ], [Résidents-jours] )
+
+CRJ réel comparable :=
+DIVIDE ( [CA CRJ comparable], [Résidents-jours] )
+
+Nb sites au-dessus du budget :=
+COUNTROWS (
+    FILTER ( VALUES ( DimSite[site_id] ), [Écart budget €] > 0 )
+)
+
+Budget CRJ cumul annuel :=
+CALCULATE ( [Budget CRJ], DATESYTD ( DimCalendrier[date] ) )
+
+CA CRJ comparable cumul annuel :=
+CALCULATE ( [CA CRJ comparable], DATESYTD ( DimCalendrier[date] ) )
+
+Écart budget cumul annuel € :=
+[CA CRJ comparable cumul annuel] - [Budget CRJ cumul annuel]
+
+// Rapprochement : CA CRJ = CA CRJ comparable + CA hors comparaison.
+CA hors comparaison :=
+[CA CRJ] - [CA CRJ comparable]

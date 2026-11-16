@@ -1,8 +1,8 @@
-crj_category,linen_internalisation,target_eur_per_resident_day,share_fixed,share_variable
-CRJ Hebergement,,0.11,0.35,0.65
-CRJ Plonge,,0.055,0.6,0.4
-CRJ Cuisine,,0.035,1.0,0.0
-CRJ autres univers,,0.03,1.0,0.0
-CRJ Lingerie,INTERNE,0.16,0.4,0.6
-CRJ Lingerie,PARTIEL,0.095,0.4,0.6
-CRJ Lingerie,EXTERNE,0.025,0.4,0.6
+crj_category,linen_internalisation,crj_fixe,crj_variable,base_lits
+CRJ Hebergement,,0.0385,0.0715,installés
+CRJ Plonge,,0.033,0.022,installés
+CRJ Cuisine,,0.0245,0.0105,installés
+CRJ autres univers,,0.03,0.0,installés
+CRJ Lingerie,INTERNE,0.0,0.16,occupés
+CRJ Lingerie,PARTIEL,0.0,0.095,occupés
+CRJ Lingerie,EXTERNE,0.0,0.025,occupés

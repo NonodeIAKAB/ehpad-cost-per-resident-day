@@ -1,0 +1,18 @@
+# Données brutes FINESS : téléchargées, jamais versionnées
+data/raw/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Excel / Power BI : fichiers temporaires et verrous
+~$*
+*.tmp
+
+# Archives de travail
+*.zip
+
+# Système
+.DS_Store
+Thumbs.db

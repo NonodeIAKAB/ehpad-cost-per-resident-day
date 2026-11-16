@@ -125,3 +125,27 @@ Les tests compareront ce que le pipeline détecte avec cette liste. Le pipeline 
 **Décision.** `Table.Buffer` sur les tables réutilisées (`FaitVentes` et `FaitOccupation` dans `Exceptions`, l'étape avant le comptage des doublons, les petites tables de référence avant jointure). Requêtes intermédiaires en « connexion uniquement » : rien n'est écrit dans une feuille sauf `Exceptions`.
 
 **Coût.** Les tables mises en mémoire occupent de la RAM (environ 250 000 lignes ici, acceptable). À ne pas généraliser : un `Table.Buffer` inutile ralentit au lieu d'accélérer.
+
+## D-014 ✅ Règle de budget : base de lits par catégorie
+
+**Contexte.** Règle métier validée : le budget n'utilise pas la même base de lits selon la catégorie.
+
+**Décision.**
+- Hébergement, Plonge, Cuisine : lits installés × (CRJ fixe + CRJ variable) × jours.
+- Autres univers : lits installés × CRJ autres × jours.
+- Lingerie : lits occupés × CRJ lingerie variable × jours, la valeur dépendant du statut d'internalisation du linge.
+- Les cibles sont exprimées en € par lit et par jour, stockées dans `crj_target.csv` avec la base de lits (`base_lits`). La règle est portée par les données, pas codée en dur dans le DAX : changer de base pour une catégorie = modifier une cellule.
+
+**Lecture.** `CRJ cible` = budget ÷ résidents-jours, pour le comparer au CRJ réel sur la même base.
+
+**Hypothèse.** La multiplication par le nombre de jours de la période (les cibles sont journalières).
+
+## D-015 ✅ Lingerie sans statut de linge : hors comparaison
+
+**Contexte.** La cible lingerie dépend du statut d'internalisation du linge. 9 sites actifs n'ont pas de statut exploitable.
+
+**Décision (métier).** Leur lingerie sort de la comparaison avec la cible : pas de budget **et** pas de chiffre d'affaires dans `CA CRJ comparable`. Comparer un chiffre d'affaires réel à un budget absent gonflerait artificiellement le dépassement.
+
+**Écarté.** Appliquer une cible par défaut : elle inventerait un budget que le métier n'a pas fixé.
+
+**Traçabilité.** `CA hors comparaison` = `CA CRJ` − `CA CRJ comparable` (25 108,19 € en 2025), et les 9 sites remontent dans `Exceptions`.

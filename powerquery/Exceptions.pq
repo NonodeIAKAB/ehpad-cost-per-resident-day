@@ -64,7 +64,13 @@ let
             n = Table.AddColumn(Table.AddColumn(c, "nb_lignes", each null, Int64.Type), "montant", each null, type number)
         in  Formater(n, "Statut du linge non renseigné", "À traiter", "Cible lingerie indéterminée ; obtenir le statut d'internalisation"),
 
-    Tout = Table.Combine({SkuInconnu, CompteInconnu, SkuNonCategorise, LingeNonRenseigne, Doublons, CompteInactifAvecVentes, SiteSansCompteActif, OccupationManquante}),
+    CategorieHorsReferentiel =
+        let
+            Connues = List.Buffer(DimCategorieCRJ[crj_category]),
+            t = Table.SelectRows(V, each not List.Contains(Connues, [crj_scope]))
+        in  Formater(ParCle(t, "crj_scope"), "Catégorie absente de DimCategorieCRJ", "Bloquant", "Ajouter la catégorie à DimCategorieCRJ, sinon ses ventes sortent des totaux par catégorie"),
+
+    Tout = Table.Combine({CategorieHorsReferentiel, SkuInconnu, CompteInconnu, SkuNonCategorise, LingeNonRenseigne, Doublons, CompteInactifAvecVentes, SiteSansCompteActif, OccupationManquante}),
     Types = Table.TransformColumnTypes(Tout, {{"cle", type text}, {"nb_lignes", Int64.Type}, {"montant", Currency.Type}})
 in
     Types
