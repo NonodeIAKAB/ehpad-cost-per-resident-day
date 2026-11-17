@@ -172,3 +172,12 @@ CALCULATE ( [CA CRJ comparable], DATESYTD ( DimCalendrier[date] ) )
 // Rapprochement : CA CRJ = CA CRJ comparable + CA hors comparaison.
 CA hors comparaison :=
 [CA CRJ] - [CA CRJ comparable]
+
+
+// ---------- 7. Comparaisons pour le tableau de bord ------------------------------------
+
+Écart budget % N-1 :=
+CALCULATE ( [Écart budget %], SAMEPERIODLASTYEAR ( DimCalendrier[date] ) )
+
+Nb sites au-dessus du budget N-1 :=
+CALCULATE ( [Nb sites au-dessus du budget], SAMEPERIODLASTYEAR ( DimCalendrier[date] ) )
