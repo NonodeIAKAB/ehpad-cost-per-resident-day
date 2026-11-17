@@ -116,4 +116,4 @@ Pour reconstruire la dimension des sites depuis FINESS, voir la section 2 du mod
 
 ---
 
-**Arnaud Kamguia**, Data Analyst · [LinkedIn](https://www.linkedin.com/in/À-COMPLÉTER)
+**Arnaud Kamguia**, Data Analyst · [LinkedIn](https://www.linkedin.com/in/a-kamguia)
